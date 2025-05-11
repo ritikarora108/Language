@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#111111; color:aliceblue">
+    <pre>
+    XMLHttpRequest.ready states:
+
+    Value    State              Description
+    0       UNSENT             Client has been created. open() not called yet.
+    1       OPENED             open() has been called.
+    2       HEADERS_RECEIVED   send() has been called, and headers and status are available.
+    3       LOADING            Downloading; responseText holds partial data.
+    4       DONE               The operation is complete.
+    </pre>
+    <p>Tap to get picture and followers count</p>
+    <button id="tap" type="submit" style="width:80px; height:30px;margin-left: 0.5cm;">Tap</button>
+    <br/>
+    <br/>
+    <div>
+        <img id="addImage" src="" alt="">
+        <br />
+        <text id="addText" style="margin-left: 1cm;"></text>
+    </div>
+</body>
+<script>
+    // const requestUrl1= "https://api.github.com/users/ritik692";
+    // const xhr1=new XMLHttpRequest();
+    // xhr1.open('GET',requestUrl1)
+    // xhr1.onreadystatechange = function(){
+    //     console.log(xhr.readyState)
+    //     if(xhr1.readyState===4){
+            
+    //         const data=this.responseText;
+    //         console.log(typeof data)
+    //         const dataObject=JSON.parse(data);
+    //         console.log(typeof dataObject)
+    //         console.log(dataObject);
+    //         console.log(dataObject.following);
+    //     }
+    // }
+    
+    // xhr1.send()
+
+
+    const requestUrl2="https://api.github.com/users/hiteshChoudhary";
+    const tap=document.querySelector('#tap');
+    //console.log(tap)
+    tap.addEventListener('click',()=>{
+        xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', requestUrl2);
+        xhr2.onreadystatechange = function(){
+            if(xhr2.readyState===4){
+                const data=JSON.parse(this.responseText);
+                const image=document.querySelector('#addImage');
+                const text=document.getElementById('addText');
+                image.outerHTML=`<img id="addImage" width="200px" height="200px" src="${data.avatar_url}" alt="">`
+                text.innerHTML=`Followers:${data.followers}`;
+            }
+        }
+        xhr2.send();
+    })
+    
+
+    
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #313131; color:aliceblue">
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+    const start=document.querySelector('#start');
+    const printTime=function(str){
+        let date = new Date();
+        console.log(`${str} : ${date.toLocaleTimeString()}`);
+    }
+   
+    let timings;
+
+    start.addEventListener('click',function(e){
+        timings= setInterval(printTime, 1000,"Time")
+    })
+
+    const stop=document.getElementById('stop');
+    stop.addEventListener('click',function(e){
+        clearInterval(timings);
+    })
+</script>
+</html>
