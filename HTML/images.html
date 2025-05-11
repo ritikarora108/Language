@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+
+    <style>
+        body{
+            background-color: #414141;
+            color:#FFFFFF
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400px" alt="no image found">
+    <img src="./HTML_cours.png" width="400px" alt="no image found">
+
+    <picture>
+        <source media="(min width: 650 px)" srcset="./HTML_course.png"/>
+
+        <source media="(min width: 460 px)" srcset="https://images.pexels.com/photos/2756842/pexels-photo-2756842.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
+
+        <img src="./HTML_cours.png" width="400px" alt="image not found">
+    </picture>
+
+
+    <!-- an image map generator -->
+    <img src="./HTML_course.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area onclick="one()" alt="" title="" href="" coords="2597,481,3719,1899" shape="rect">
+        <area onclick="two()" alt="" title="" href="" coords="4230,2985,1183" shape="circle">
+    </map>
+
+
+    <script>
+        function one()
+        {
+            alert("You clicked on one")
+        }
+        function two()
+        {
+            alert("You clicked on two")
+        }
+    </script>
+</body>
+</html>

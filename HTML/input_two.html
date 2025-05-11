@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms_1</title>
+    <link rel="stylesheet" href="./head.css">
+</head>
+<body>
+    <h1>Forms in html</h1>
+
+    <!-- generally method="POST" for encrypting the data to send to the server -->
+    <!-- method="GET" ,clear text format -->
+    <form action="url" method="GET" accept-charset="UTF-8" autocomplete="off" enctype="" >
+
+        <!-- use label so that screen readers are able to get the info -->
+
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="first name" name="" value="hitesh" id="fname" \>
+        
+        
+        <input type="password" name="" id="input" class="form-control" required="required" title="">
+        
+        <input type="week" name="" id="">
+        <input type="reset" value="reset">
+        
+        <select name="editors" id="" multiple>
+            <option value="VsCode">VsCode</option>
+            <option value="Sublime text">sublime</option>
+            <option value="NeoVim">NVM</option>
+        </select>
+
+        <input list="editors" name="editor">
+        <datalist id="editors">
+            <option value="VsCode">VsCode</option>
+            <option value="Sublime text">sublime</option>
+            <option value="NeoVim">NVM</option>
+        </datalist>
+
+
+        <input type="hidden" name="">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

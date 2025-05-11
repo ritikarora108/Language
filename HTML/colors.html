@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            color: aqua
+        }
+    </style>
+
+    <!-- style.css overrides the above style->body->color ( the one which is used later will be implemented ) -->
+
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- rgb: reg green blue (0-256) -->
+    <h3 
+    style="text-align:center; 
+    background-color: rgb(176, 217, 218);">
+    this tag needs some styling by rgb
+    </h3>
+    
+    <!-- hsl: hue saturation lightness (0-360) -->
+    <h3 
+    style="text-align:center; 
+    background-color: hsl(35, 50%, 70%);">
+    this tag needs some styling by hsl
+    </h3>
+
+    <!-- hsla,  a means alpha : opacity -->
+    <h3 
+    style="text-align:center; 
+    background-color: hsla(35, 50%, 70%,0.35);">
+    this tag needs some styling by hsla
+    </h3>
+    
+    
+
+    <!-- this inline style (attribute) feature overrides the previous features -->
+    <h3 
+    style="text-align:center; 
+    background-color: rgb(220, 178, 203);
+    color:blueviolet">
+    this tag needs some styling by hexCoding
+    </h3>
+    
+
+    <p>
+        <!-- <blockquote cite="Elon">this is my quote</blockquote> -->
+
+        <q>
+            this is new quote
+        </q>
+
+        <abbr title="Hyper Text Markup Language">HTML</abbr>
+
+        <address>what to do</address>
+
+        <address><a href="mailto: aroraritik30@gmail.com">aroraritik30@gmail.com</a></address>
+
+        <address><a href="tel:7015036692">(+91)7015036692</a></address>
+
+        <bdo dir="rtl">Hitesh</bdo>
+        <!--used to right in urdu from R to L-->
+        <br/>
+
+        First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George
+        Orwell (Part 1, Chapter 1).
+        <br/>
+        <cite>Ritik</cite>
+    </p>
+
+</body>
+</html>
